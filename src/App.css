@@ -1,38 +1,673 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto:wght@100&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin: 0px;
+    padding: 0px;
+    /* font-family: 'PT Serif', serif; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navebar{
+    width: 100%;
+    height: 67px;
+    /* background-color:rgb(146, 238, 195); */
+    background-color:rgb(209, 207, 207);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(77, 76, 76);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; 
+    padding: 5px 5px 0px 0px; 
   }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    color: #0087ca;
+    background-color: 
+  #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: #0087ca;
+  }
+/* a{
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(77, 76, 76);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;  
+}
+a:hover{
+    text-decoration: underline;
+    color: red;
+} */
+.ShoppingCart{
+    margin-left: 10px;
+    color: rgb(77, 76, 76);
+}
+.navicon{
+    color: rgb(77, 76, 76);
+}
+.navicon:hover{
+  color: rgb(153, 18, 18);
+}
+.ShoppingCart:hover{
+  margin-left: 10px;
+  color: rgb(153, 18, 18);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* --------------------------------------------nav--------------------------------------- */
+
+.home-img{
+    width: 100%;
+    height: 550px;
+    background-image: url('https://cdn.pixabay.com/photo/2015/04/10/17/03/pots-716579_1280.jpg');
+    background-attachment: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img img{
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+}
+.home-txt{
+    height: 400px;
+    width: 550px;
+    background-color: rgb(23, 83, 48,0.7);
+    /* opacity: 0.5; */
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.homeh1{
+   color: white;
+   font-size: 38PX;
+   /* text-align: justify; */
+}
+.home-txt p{
   color: white;
+  font-size: 25PX;
+  margin-top: 15px;
+}
+.home-btn{
+  width: 188px;
+  height: 35px;
+  border: none;
+  margin-top: 30px;
+  border-radius: 4px;
+  background-color: rgb(216, 208, 208);
+  font-size: 15px;
+  font-family: 'PT Serif', serif;
+}
+.home-btn:hover{
+  background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* -------------------------------home page----------------------- */
+
+.imgaagesss{
+  width: 100%;
+  height: 600px;
+  background-color: #afb3b4;
+}
+.tag{
+  height: 60px;
+  /* width: 230px; */
+  width: 100%;
+  background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mark{
+  height: 50px;
+  /* width: 230px; */
+  width: 100%;
+ justify-content: space-evenly;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+ 
 }
+.nature{
+  margin-left: 40px;
+  padding-top: 3px;
+  font-weight: lighter;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.image {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 300px;
+}
+.image img {
+  width: 300px;
+  height: 200px;
+  display: block;
+}
+.image:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+.img-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 27px;
+}
+/* #two{
+  margin-top: -10px;
+} */
+.collage-txt{
+  width: 100%;
+  height: 100%;
+  /* background-color: aquamarine; */
+}
+.collage-txt h1{
+  font-size: 49px;
+  padding-left: 12px;
+  color: rgb(66, 66, 66);
+}
+.collage-txt p{
+  font-size: 25px;
+  padding: 12px;
+  color: rgb(66, 66, 66);
+}
+.img-btn{
+  width: 188px;
+  height: 35px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 4px;
+  background-color: rgb(216, 208, 208);
+  font-size: 15px;
+  font-family: 'PT Serif', serif;
+  margin-left: 12px;
+}
+.img-btn:hover{
+  background-color: white;
+}
+h1 span{
+  color: rgb(0, 0, 0);
+}
+#img1{
+  background-image: url('https://us.123rf.com/450wm/kostikova/kostikova2303/kostikova230300006/201098974-little-cute-boy-is-watering-indoor-plants-from-a-stylish-watering-can-in-a-designer-white-home.jpg?ver=6');
+  background-size: cover;
+}
+#img2{
+  background-image: url('https://www.ugaoo.com/cdn/shop/articles/woman-taking-care-her-plant-baby.jpg?v=1673638843');
+  background-size: cover;
+}
+/* ---------------------------------images------------------------------ */
+
+.page-shop{
+  width: 100%;
+  height: 550px;
+  background-color: #afb3b4;
+  /* background-color: #69b3c5; */
+}
+.q{
+  width: 100%;
+  height: 65px;
+  background-color: white;
+  
+}
+marquee{
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.shop-img{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.shop-cards{
+  width: 100%;
+  /* height: 500px; */
+  /* background-color: bisque; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 25px;
+  /* align-items: center; */
+}
+.shop-item{
+  width: 250px;
+}
+.Shop-ithem-two{
+  height: 120px;
+  
+}
+.card-cntnt{
+
+  font-weight: bold;
+  color: black;
+}
+.arrivals{
+  padding-top: 19px;
+  padding-left: 30px;
+  font-size: 43px;
+  color: rgb(51, 51, 51);
+}
+.card-1{
+  height: 100px;
+}
+
+
+/* footer---------------- */
+
+.foot{
+  width: 100%;
+  height: 80px;
+  background-color: #afb3b4;
+}
+
+.ear{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #afb3b4; */
+  flex-direction: column;
+}
+.btn-btn{
+  padding: 10px;
+  color: black;
+}
+.name{
+  margin-top: 13px;
+}
+.btn-btn:hover{
+  color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .navebar{
+        width: 100%;
+        height: 67px;
+        background-color: rgb(250, 237, 213);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3px 0px 3px 0px;
+    }
+    .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        margin: 3px;
+        color: rgb(77, 76, 76);
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;  
+      }
+      
+      .hover-underline-animation:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: 
+      #0087ca;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      
+      .hover-underline-animation:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    .ShoppingCart{
+        margin-left: 10px;
+        color: rgb(77, 76, 76);
+    }
+    .navicon{
+        color: rgb(77, 76, 76);
+    }
+    .navicon:hover{
+      color: rgb(153, 18, 18);
+    }
+    .ShoppingCart:hover{
+      padding-left: 30px;
+      color: rgb(153, 18, 18);
+    }
+    #one{
+      display: none;
+    }
+    /* ---------------------------nav-------------------------- */
+
+    .home-img{
+      width: 100%;
+      height: 550px;
+      background-image: url('https://img.freepik.com/premium-photo/fresh-plant-with-morning-sun-shining-through-my-happy-home_972769-469.jpg');
+      background-attachment: scroll;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  /* .home-img img{
+      width: 100%;
+      height: 550px;
+      background-size: cover;
+  } */
+  .home-txt{
+      height: 400px;
+      width: 334px;
+      background-color: rgb(23, 83, 48,0.7);
+      /* opacity: 0.5; */
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+  }
+  .homeh1{
+     color: white;
+     font-size: 33PX;
+     /* text-align: justify; */
+  }
+  .home-txt p{
+    color: white;
+    font-size: 20PX;
+    margin-top: 15px;
+  }
+  .home-btn{
+    width: 188px;
+    height: 35px;
+    border: none;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: rgb(216, 208, 208);
+    font-size: 15px;
+    font-family: 'PT Serif', serif;
+  }
+  .home-btn:hover{
+    background-color: white;
+  }
+  /* ==================================home page-------------------------- */
+
+  .imgaagesss{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 603px;
+    background-color: rgb(250, 237, 213);
+  }
+  .tag{
+    margin: 0px;
+    padding: 0px;
+    height: 50px;
+    /* width: 230px; */
+    width: 100%;
+    background-color: black;
+  }
+  
+  .mark{
+    height: 50px;
+    /* width: 230px; */
+    width: 100%;
+   justify-content: space-evenly;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+   
+  }
+  .nature{
+    width: 100%;
+    margin-left: 40px;
+    padding-bottom: 7px;
+    /* padding-top: 3px; */
+    font-weight: lighter;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .image-gallery {
+    margin-top: 7px;
+    display: flex;
+    
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+    /* max-width: 800px; */
+    margin: 0 auto;
+  }
+  .image {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 280px;
+  }
+  .image img {
+    width: 280px;
+    height: 100px;
+    display: block;
+  }
+  .image:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+  }
+  .img-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #two{
+    display: none;
+  }
+  .collage-txt{
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+  }
+  .collage-txt h1{
+    font-size: 33px;
+    padding-left: 34px;
+    color: rgb(66, 66, 66);
+  }
+  .collage-txt p{
+    padding-left: 34px;
+    padding-right: 15px;
+    text-align: initial;
+    font-size: 20px;
+    /* padding: 6px; */
+    color: rgb(66, 66, 66);
+  }
+  .img-btn{
+    width: 188px;
+    height: 35px;
+    border: none;
+    margin-top: 3px;
+    border-radius: 4px;
+    background-color: rgb(216, 208, 208);
+    font-size: 15px;
+    font-family: 'PT Serif', serif;
+    margin-left: 34px;
+  }
+  .img-btn:hover{
+    background-color: white;
+  }
+  h1 span{
+    color: rgb(0, 0, 0);
+  }
+  #img1{
+    background-image: url('https://hips.hearstapps.com/hmg-prod/images/man-watering-houseplants-royalty-free-image-1678736179.jpg?crop=1.00xw:0.752xh;0,0.108xh&resize=640:*');
+    background-size: cover;
+  }
+  #img2{
+    background-image: url('https://blogscdn.thehut.net/app/uploads/sites/1356/2021/03/Copy-of-Untitled-3_1615382753.jpg');
+    background-size: cover;
+  }
+  #gall1{
+    margin-top: 7px;
+  }
+  /* ---------------------------------images------------------------------ */
+
+  .page-shop{
+    width: 100%;
+    height: 1293px;
+    background-color: rgb(250, 237, 213);
+    /* background-color: #69b3c5; */
+  }
+  .q{
+    width: 100%;
+    height: 65px;
+    background-color: white;
+    
+  }
+  marquee{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .shop-img{
+    /* padding-left: 25px; */
+    padding-right: 25px;
+  }
+  .shop-cards{
+    width: 100%;
+    height: 500px;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 25px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .card-1{
+    padding-bottom: 5px;
+    margin-top: 250px;
+  }
+  #none{
+    display: none;
+  }
+  .shop-item{
+    width: 300px;
+    height: 400px;
+    
+  }
+  .Shop-ithem-two{
+    height: 120px;
+    
+  }
+  .card-cntnt{
+  
+    font-weight: bold;
+    color: black;
+  }
+  .arrivals{
+    padding-top: 19px;
+    padding-left: 16px;
+    font-size: 36px;
+    color: rgb(51, 51, 51);
+  }
+  .card-1{
+    
+    height: 100px;
+  }
+  .view{
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 526px;
+    /* padding-left: 22px; */
+    margin-left: 20px;
+  }
+
+  .foot{
+    width: 100%;
+    height: 80px;
+    background-color: #afb3b4;
+  }
+  
+  .ear{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #afb3b4; */
+    flex-direction: column;
+  }
+  .btn-btn{
+    padding: 10px;
+    color: black;
+  }
+  .name{
+    margin-top: 13px;
+    
+  }
+  .btn-btn:hover{
+    color: blue;
+  }
+  
+
+  
+
+  }
