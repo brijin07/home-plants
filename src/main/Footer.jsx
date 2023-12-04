@@ -29,8 +29,8 @@ function Footer() {
   {/* Grid container */}
   {/* Copyright */}
   <div className="name  text-center text-dark p-3" >
-    © 2020 Copyright:
-    <a className="text-dark" style={{textDecoration:"none",color:"black"}} href="https://mdbootstrap.com/">Jishnupmd2002@gmail</a>
+    © 2023 Copyright:
+    <a className="text-dark" style={{textDecoration:"none",color:"black"}} href="https://mdbootstrap.com/">brijingeorge07@gmail.com</a>
   </div>
   {/* Copyright */}
 </footer>
